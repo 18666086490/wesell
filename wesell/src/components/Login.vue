@@ -43,7 +43,7 @@ export default {
     },
     methods:{
         login:function () {
-          this.$router.push('/HelloWorld');
+          this.$router.push('/control');
         }
     }
 

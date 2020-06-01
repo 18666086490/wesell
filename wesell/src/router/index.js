@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Login from '../components/Login'
-import HelloWorld from "../components/HelloWorld";
+import Control from '../components/control/control.vue'
 
 Vue.use(VueRouter)
 
@@ -18,9 +18,9 @@ Vue.use(VueRouter)
       component: Login
   },
     {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/control',
+      name: 'Control',
+      component: Control
     }
 
 ]
