@@ -1,18 +1,18 @@
 <template>
 <div class="control">
-    <el-container style="height:100%;">
-        <el-header style="height:10%">
+    <el-container direction="vertical">
+        <el-header>
             <el-row :gutter="20">
                 <el-col :span="16">
-                    <div class="grid-content">v部落博客管理平台</div>
+                    <div class="grid-left">湖北天门市</div>
                 </el-col>
                 <el-col :span="8">
-                    <div class="bg-purple">江南一点雨</div>
+                    <div class="bg-purple">一点雨</div>
                 </el-col>
             </el-row>
         </el-header>
-        <el-container style="height:90%;">
-            <el-aside style="height:100%;">
+        <el-container>
+            <el-aside width="200px">
                 <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
                     <el-submenu index="1">
                         <template slot="title">
@@ -46,7 +46,9 @@
                     </el-menu-item>
                 </el-menu>
             </el-aside>
-            <el-main></el-main>
+            <el-main>
+
+            </el-main>
         </el-container>
     </el-container>
 </div>
@@ -71,20 +73,35 @@ export default {
     height:100%;
     border: solid 1px #7c7c7c;
 }
-
-.el-header,
-.el-footer {
+.el-menu-vertical-demo{
+    height: 100%;
+    width:200px;
+}
+.el-container{height:100%;padding:0;margin:0;width:100%;}
+.el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
     line-height: 60px;
+    height: 100%;
 }
+html,body,#app,.el-container{
+    /*设置内部填充为0，几个布局元素之间没有间距*/
+    padding: 0px;
+    /*外部间距也是如此设置*/
+    margin: 0px;
+    /*统一设置高度为100%*/
+    height: 100%;
+}
+
+
 
 .el-aside {
     background-color: #D3DCE6;
     color: #333;
     text-align: center;
     line-height: 200px;
+    heigth:100%;
 }
 
 .el-main {
@@ -92,15 +109,11 @@ export default {
     color: #333;
     text-align: center;
     line-height: 160px;
+    height: 100%;
 }
 
-body>.el-container {
-    margin-bottom: 40px;
-}
 
-/* .el-menu-vertical-demo{
-      height: 500px;
-  } */
+
 .el-container:nth-child(5) .el-aside,
 .el-container:nth-child(6) .el-aside {
     line-height: 260px;
